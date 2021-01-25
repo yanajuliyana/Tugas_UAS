@@ -52,10 +52,40 @@ class ItemList extends StatelessWidget {
                       ))),
               child: new GestureDetector(
                 child: new Card(
-                  child: new ListTile(
-                    title: new Text(list[i]['name_catalog']),
-                    leading: new Icon(Icons.image),
+                  child: Row(
+                    children: [
+                      Image.network(
+                        'https://projectfluttercrud.000webhostapp.com/image/' +
+                            list[i]['icon'],
+                        height: 200.0,
+                        width: 200.0,
+                      ),
+                      Text(
+                        list[i]['name_catalog'],
+                        style: TextStyle(
+                          fontSize: 80.0,
+                        ),
+                      )
+                    ],
                   ),
+                  // child: new ListTile(
+                  //   title: new Text(list[i]['name_catalog']),
+                  //   // leading: new Icon(Icons.image),
+                  //   // leading: GestureDetector(
+                  //   //   child: Image.network(
+                  //   //     'https://projectfluttercrud.000webhostapp.com/image/' +
+                  //   //         list[i]['icon'],
+                  //   //     height: 200.0,
+                  //   //     width: 200.0,
+                  //   //   ),
+                  //   // ),
+                  //   // leading: Image.network(
+                  //   //   'https://projectfluttercrud.000webhostapp.com/image/' +
+                  //   //       list[i]['icon'],
+                  //   //   height: 200.0,
+                  //   //   width: 200.0,
+                  //   // ),
+                  // ),
                 ),
               ),
             ),

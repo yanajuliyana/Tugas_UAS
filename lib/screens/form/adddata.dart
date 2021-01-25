@@ -28,6 +28,7 @@ class _AddDataState extends State<AddData> {
     int rand = new Math.Random().nextInt(100000);
     Img.Image image = Img.decodeImage(imageFile.readAsBytesSync());
     Img.Image smallerImg = Img.copyResize(image, width: 224, height: 224);
+    print(smallerImg);
     var compressImg = new File("$path/image_$rand.jpg")
       ..writeAsBytesSync(Img.encodeJpg(smallerImg, quality: 85));
     setState(() {
@@ -111,6 +112,7 @@ class _AddDataState extends State<AddData> {
             RaisedButton(
               child: Text("TAMBAH DATA"),
               onPressed: () {
+                print(_image);
                 addData(_image);
               },
             ),
