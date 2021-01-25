@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/models/Product.dart';
+import 'package:shop_app/screens/form/adddata.dart';
+import 'package:shop_app/screens/form/form.dart';
 import 'package:shop_app/screens/home/components/About.dart';
 
 import 'package:shop_app/screens/home/components/LoginPage.dart';
 import 'package:shop_app/screens/home/components/categorries.dart';
 import 'package:shop_app/screens/home/home_screen.dart';
+import 'package:shop_app/screens/home/landingpage.dart';
 
 class DrawerItem {
   String title;
@@ -14,10 +17,11 @@ class DrawerItem {
 
 class PageHome extends StatefulWidget {
   final drawerItem = [
-    new DrawerItem("Home", Icons.home),
-    new DrawerItem("Produk", Icons.shopping_bag),
-    new DrawerItem("Kategori", Icons.category),
-    new DrawerItem("About", Icons.person),
+    new DrawerItem("Home", Icons.home_work),
+    new DrawerItem("Produk", Icons.smartphone),
+    new DrawerItem("Kategori", Icons.category_rounded),
+    new DrawerItem("Input", Icons.add_a_photo),
+    new DrawerItem("About", Icons.person_add_alt),
     new DrawerItem("Logout", Icons.logout),
   ];
 
@@ -33,12 +37,14 @@ class _PageHomeState extends State<PageHome> {
       case 0:
         return new HomeScreen();
       case 1:
-        return new HomeScreen();
+        return new LandingPage();
       case 2:
-        return new HomeScreen();
+        return new ThirdFragment();
       case 3:
-        return new Abouts();
+        return new AddData();
       case 4:
+        return new Abouts();
+      case 5:
         return new Login();
 
       default:
