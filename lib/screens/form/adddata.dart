@@ -96,6 +96,7 @@ class _AddDataState extends State<AddData> {
               decoration: new InputDecoration(
                   hintText: "Isi Kategori disini...", labelText: "Kategori"),
             )),
+
         Row(
           children: <Widget>[
             RaisedButton(

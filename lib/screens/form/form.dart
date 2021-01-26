@@ -1,8 +1,18 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:shop_app/PageHome.dart';
+import 'package:shop_app/screens/details/components/add_to_cart.dart';
+import 'package:shop_app/screens/details/components/description.dart';
+import 'package:shop_app/screens/details/components/product_title_with_image.dart';
+import 'package:shop_app/screens/details/details_screen.dart';
 import 'package:shop_app/screens/form/detail.dart';
 import 'dart:async';
 import 'dart:convert';
+
+import 'package:shop_app/screens/home/components/body.dart';
+import 'package:shop_app/screens/home/home_screen.dart';
+import 'package:shop_app/screens/home/item_card.dart';
 
 class ThirdFragment extends StatefulWidget {
   @override
@@ -43,6 +53,7 @@ class ItemList extends StatelessWidget {
         itemCount: list == null ? 0 : list.length,
         itemBuilder: (context, i) {
           return new Container(
+            color: Colors.brown,
             padding: const EdgeInsets.all(10.0),
             child: new GestureDetector(
               onTap: () => Navigator.of(context).push(new MaterialPageRoute(
@@ -57,15 +68,26 @@ class ItemList extends StatelessWidget {
                       Image.network(
                         'https://projectfluttercrud.000webhostapp.com/image/' +
                             list[i]['icon'],
-                        height: 200.0,
+                        height: 250.0,
                         width: 200.0,
                       ),
+                      Padding(padding: const EdgeInsets.all(10.0)),
                       Text(
                         list[i]['name_catalog'],
                         style: TextStyle(
-                          fontSize: 80.0,
+                          fontSize: 20.0,
                         ),
-                      )
+                      ),
+                      Padding(padding: const EdgeInsets.all(10.0)),
+                      RaisedButton(
+                          color: Colors.orange,
+                          child: Text("Detail"),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => PageHome()));
+                          }),
                     ],
                   ),
                   // child: new ListTile(

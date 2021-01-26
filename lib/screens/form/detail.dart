@@ -19,6 +19,7 @@ class _DetailkategoriState extends State<Detailkategori> {
   void deleteData() {
     var url = "https://projectfluttercrud.000webhostapp.com/deletenews.php";
     http.post(url, body: {'idnews': widget.list[widget.index]['id']});
+
     Fluttertoast.showToast(
         msg: "Kategori " +
             widget.list[widget.index]['name_catalog'] +
