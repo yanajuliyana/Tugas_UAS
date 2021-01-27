@@ -42,7 +42,7 @@ class Abouts extends StatelessWidget {
     final copyright2 = Padding(
       padding: EdgeInsets.all(8.0),
       child: Text(
-        'Raden Jaka, Wandi Wardiman ,Yana Juliyana',
+        'Raden Jaka F, Wandi Wardiman ,Yana Juliyana, M Ihsan N',
         style: TextStyle(fontSize: 16.0, color: Colors.white),
       ),
     );
@@ -52,7 +52,7 @@ class Abouts extends StatelessWidget {
       padding: EdgeInsets.all(28.0),
       decoration: BoxDecoration(
         gradient: LinearGradient(colors: [
-          Colors.blue,
+          Colors.orange,
           Colors.lightBlueAccent,
         ]),
       ),

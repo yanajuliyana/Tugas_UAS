@@ -18,7 +18,7 @@ class _LoginState extends State<Login> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         padding: const EdgeInsets.all(8),
-        color: Colors.lightBlueAccent,
+        color: Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[

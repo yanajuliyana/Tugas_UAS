@@ -18,20 +18,21 @@ class _DaftarState extends State<Daftar> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         padding: const EdgeInsets.all(8),
-        color: Colors.lightBlueAccent,
+        color: Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              width: 100.0,
+              width: 450.0,
               height: 100.0,
               decoration: BoxDecoration(),
               child: Padding(
-                  padding: EdgeInsets.only(top: 10.0),
+                  padding: EdgeInsets.only(top: 1.0),
                   child: Image.asset(
                     "assets/images/logo.png",
                   )),
             ),
+            Padding(padding: EdgeInsets.all(20.0)),
             Text(
               "DAFTAR",
               style: TextStyle(
@@ -59,7 +60,7 @@ class _DaftarState extends State<Daftar> {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 5.0,
             ),
             TextFormField(
               controller: txtemail,
@@ -79,7 +80,7 @@ class _DaftarState extends State<Daftar> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 5.0,
             ),
             TextFormField(
               controller: txtPassword,
@@ -99,7 +100,7 @@ class _DaftarState extends State<Daftar> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 5.0,
             ),
             ButtonTheme(
               minWidth: double.infinity,

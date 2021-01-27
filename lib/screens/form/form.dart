@@ -2,17 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shop_app/PageHome.dart';
-import 'package:shop_app/screens/details/components/add_to_cart.dart';
-import 'package:shop_app/screens/details/components/description.dart';
-import 'package:shop_app/screens/details/components/product_title_with_image.dart';
-import 'package:shop_app/screens/details/details_screen.dart';
 import 'package:shop_app/screens/form/detail.dart';
 import 'dart:async';
 import 'dart:convert';
-
-import 'package:shop_app/screens/home/components/body.dart';
-import 'package:shop_app/screens/home/home_screen.dart';
-import 'package:shop_app/screens/home/item_card.dart';
 
 class ThirdFragment extends StatefulWidget {
   @override
@@ -53,7 +45,12 @@ class ItemList extends StatelessWidget {
         itemCount: list == null ? 0 : list.length,
         itemBuilder: (context, i) {
           return new Container(
-            color: Colors.brown,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(colors: [
+                Colors.orange,
+                Colors.lightBlueAccent,
+              ]),
+            ),
             padding: const EdgeInsets.all(10.0),
             child: new GestureDetector(
               onTap: () => Navigator.of(context).push(new MaterialPageRoute(
