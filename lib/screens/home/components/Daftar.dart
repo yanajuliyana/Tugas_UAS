@@ -17,14 +17,19 @@ class _DaftarState extends State<Daftar> {
     return Scaffold(
       body: Container(
         width: MediaQuery.of(context).size.width,
-        padding: const EdgeInsets.all(8),
-        color: Colors.white,
+        padding: EdgeInsets.all(28.0),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(colors: [
+            Colors.orange,
+            Colors.lightBlueAccent,
+          ]),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
               width: 450.0,
-              height: 100.0,
+              height: 80.0,
               decoration: BoxDecoration(),
               child: Padding(
                   padding: EdgeInsets.only(top: 1.0),
@@ -41,7 +46,7 @@ class _DaftarState extends State<Daftar> {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 5.0,
             ),
             TextFormField(
               controller: txtUsername,
@@ -60,7 +65,7 @@ class _DaftarState extends State<Daftar> {
               ),
             ),
             SizedBox(
-              height: 5.0,
+              height: 3.0,
             ),
             TextFormField(
               controller: txtemail,

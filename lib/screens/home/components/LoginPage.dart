@@ -17,14 +17,19 @@ class _LoginState extends State<Login> {
     return Scaffold(
       body: Container(
         width: MediaQuery.of(context).size.width,
-        padding: const EdgeInsets.all(8),
-        color: Colors.white,
+        padding: EdgeInsets.all(28.0),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(colors: [
+            Colors.orange,
+            Colors.lightBlueAccent,
+          ]),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
               width: 100.0,
-              height: 100.0,
+              height: 80.0,
               decoration: BoxDecoration(),
               child: Padding(
                   padding: EdgeInsets.only(top: 10.0),
