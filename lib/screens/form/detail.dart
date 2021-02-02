@@ -55,7 +55,7 @@ class _DetailkategoriState extends State<Detailkategori> {
       ],
     );
 
-    showDialog(context: context, child: alertDialog);
+    // showDialog(context: context, child: alertDialog);
   }
 
   @override
